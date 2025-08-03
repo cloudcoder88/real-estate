@@ -9,4 +9,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'house-project';
+  inquire(propertyName: string): void {
+    alert(`thanks for your interest in : ${propertyName}. we will get back to you shortly`);
+  }
 }
