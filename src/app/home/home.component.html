@@ -1,0 +1,17 @@
+<section class="hero">
+  <h2>Find Your Dream Home in Lagos</h2>
+  <p>Affordable, luxury, waterfront & mainland properties.</p>
+</section>
+
+<section id="properties" class="properties">
+  <h2>Featured Listings</h2>
+  <div class="property-list">
+    <div *ngFor="let property of properties" class="property-card">
+      <img [src]="property.image" [alt]="property.name" />
+      <h3>{{ property.name }}</h3>
+      <p>₦{{ property.price }} - {{ property.beds }} Bed, {{ property.baths }} Bath</p>
+      <p *ngIf="property.description">{{ property.description }}</p>
+      <button (click)="inquire(property.name)">Inquire</button>
+    </div>
+  </div>
+</section>
